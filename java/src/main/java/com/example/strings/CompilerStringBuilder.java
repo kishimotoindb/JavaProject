@@ -9,5 +9,7 @@ public class CompilerStringBuilder {
         String a ="";
         a= "a"+"c"+"d"+1;
         String b = "b"+"c"+"d"+1;
+        StringBuilder sb = new StringBuilder();
+        sb.append(12);
     }
 }

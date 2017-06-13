@@ -6,12 +6,12 @@ package com.example.inherit_class_inner_class_member_scope.a;
 
 public class PackageClass {
     void method() {
-        BaseClass.BaseInnerClass bic = new BaseClass().new BaseInnerClass();
+//        BaseClass.BaseInnerClass bic = new BaseClass().new BaseInnerClass();
     }
 
     class PackageInnerClass extends BaseClass.BaseInnerClass {
-        PackageInnerClass(BaseClass bs) {
-            bs.super();
-        }
+//        PackageInnerClass(BaseClass bs) {
+//            bs.super();
+//        }
     }
 }

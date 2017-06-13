@@ -15,12 +15,12 @@ public class BaseClass {
 
     public BaseClass() {
         System.out.println("base class constructor");
-//        father();
+//        Father();
 //        System.out.println("base" + o1);
     }
 
     protected void father() {
-        System.out.println("base class father");
+        System.out.println("base class Father");
     }
 
     public void first() {
