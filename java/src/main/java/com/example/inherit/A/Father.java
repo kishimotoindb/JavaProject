@@ -8,7 +8,16 @@ import com.example.inherit.B.Child;
 /*
  *
  */
-public abstract class Father<T extends FatherHolder> {
+//问题１
+//public abstract class Father<T extends FatherHolder> {
+//    protected void get(T t) {
+//    }
+//
+//    protected abstract void set(T t);
+//}
+
+//问题２
+public abstract class Father<T> {
     protected void get(T t) {
     }
 
