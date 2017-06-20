@@ -16,10 +16,10 @@ public class ArrayInitializer {
         Arrays.toString(array);*/
 
 //        printArrayArgument(null);
-        printArrayArgument(new String[]{"1","2"});
-
-        printVariableArgumentLists();
-        printVariableArgumentLists(new String[]{"1","2"});
+//        printArrayArgument(new String[]{"1","2"});
+//
+//        printVariableArgumentLists();
+//        printVariableArgumentLists(new String[]{"1","2"});
     }
 
     static void printArrayArgument(String[] strings) {
