@@ -12,18 +12,18 @@ import javax.crypto.SecretKey;
 
 public class StoreKey {
     public static void main(String[] args) {
-        try {
-            KeyGenerator kgen = KeyGenerator.getInstance("AES");
-            SecureRandom sr = SecureRandom.getInstance("SHA1PRNG");
-            kgen.init(128, sr);
-            SecretKey skey = kgen.generateKey();
-            SecretKey skey1 = kgen.generateKey();
-            byte[] key = skey.getEncoded();
-            byte[] key1 = skey1.getEncoded();
-            System.out.println("key is " + new String(key));
-            System.out.println("key1 is " + new String(key1));
-        } catch (NoSuchAlgorithmException e) {
-
-        }
+//        try {
+//            KeyGenerator kgen = KeyGenerator.getInstance("AES");
+//            SecureRandom sr = SecureRandom.getInstance("SHA1PRNG");
+//            kgen.init(128, sr);
+//            SecretKey skey = kgen.generateKey();
+//            SecretKey skey1 = kgen.generateKey();
+//            byte[] key = skey.getEncoded();
+//            byte[] key1 = skey1.getEncoded();
+//            System.out.println("key is " + new String(key));
+//            System.out.println("key1 is " + new String(key1));
+//        } catch (NoSuchAlgorithmException e) {
+//
+//        }
     }
 }
