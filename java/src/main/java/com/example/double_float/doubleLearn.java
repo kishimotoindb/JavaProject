@@ -11,7 +11,10 @@ public class doubleLearn {
 //        System.out.println(f);
 
         String f = "0.1";
-        double result= Double.valueOf(f);
+        double result = Double.valueOf(f);
+        System.out.println(result);
+
+        result *= 0.1;
         System.out.println(result);
 
     }
