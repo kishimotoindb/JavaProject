@@ -10,12 +10,38 @@ public class doubleLearn {
 //        float f = 0.1f;
 //        System.out.println(f);
 
-        String f = "0.1";
-        double result = Double.valueOf(f);
-        System.out.println(result);
+//        String f1 = "0.1";
+//        String f2 = "0.01";
+//        String f3 = "0.001";
+//        String f4 = "0.0001";
+//        String f5 = "0.00001";
+//        double r1 = Double.valueOf(f1);
+//        double r2 = Double.valueOf(f2);
+//        double r3 = Double.valueOf(f3);
+//        double r4 = Double.valueOf(f4);
+//        double r5 = Double.valueOf(f5);
+//        System.out.println(r1);
+//        System.out.println(r2);
+//        System.out.println(r3);
+//        System.out.println(r4);
+//        System.out.println(r5);
+//
+//        r1 *= 0.1;
+//        System.out.println(r1);
 
-        result *= 0.1;
-        System.out.println(result);
+        long l = -1;
+        long b = 1;
+        System.out.println(System.currentTimeMillis());
+        System.out.println(l + "");
+        System.out.println(System.currentTimeMillis());
+        System.out.println(String.valueOf(l));
+        System.out.println(System.currentTimeMillis());
+
+        System.out.println(System.currentTimeMillis());
+        System.out.println(b + "");
+        System.out.println(System.currentTimeMillis());
+        System.out.println(String.valueOf(b));
+        System.out.println(System.currentTimeMillis());
 
     }
 
