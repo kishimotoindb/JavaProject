@@ -16,14 +16,20 @@ public class StaticInitializer {
 }
 
 class Cup {
-    static String s1 = "s1";
-    static String s2;
+    static{
+        s2 = "s22";
+        a1 = new int[]{1, 2, 2};
+    }
+
+    static String s1 = "s11";
+    static String s2="s21";
     static int[] a1;
 
     static{
-        s2 = "s2";
-        a1 = new int[]{1, 2, 2};
+        s1 = "s12";
     }
+
+
     Cup(int marker) {
         System.out.println("Cup(" + marker + ")");
     }
