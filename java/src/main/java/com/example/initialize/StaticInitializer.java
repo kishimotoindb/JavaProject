@@ -1,4 +1,4 @@
-package com.example;
+package com.example.initialize;
 
 /**
  * Created by cuihaichen on 17-4-12.

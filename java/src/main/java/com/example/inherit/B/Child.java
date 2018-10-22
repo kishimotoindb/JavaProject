@@ -32,9 +32,8 @@ import com.example.inherit.A.FatherHolder;
 //这样也可以，是因为Father<T>中的Ｔ默认继承了Object,实际等于Father<T extends Object>
 public class Child extends Father<Child.ChildHolder> {
 
-
     @Override
-    protected void get(ChildHolder c) {
+    public void get(ChildHolder c) {
     }
 
     @Override
