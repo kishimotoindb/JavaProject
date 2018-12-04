@@ -9,5 +9,10 @@ import java.io.IOException;
 
 public class FileTest {
     public static void main(String[] args) throws IOException {
+        File source = new File("source");
+        source.createNewFile();
+        File dest = new File("dest");
+        source.renameTo(dest);
+        source.createNewFile();
     }
 }
