@@ -1,21 +1,26 @@
 package com.example.algorithm.sort;
 
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  * Created by BigFaceBear on 2020.03.04
  */
-public class BubbleSort {
+public class BaseSort {
 
     public static void main(String[] args) {
-//        int[] nums = {3, 4, 2, 1, 5, 6, 7, 8};
-        int[] nums = {1, 2, 3, 8, 11, 9, 7, 20, 21, 22};
-//        int[] nums = {2, 3, 4, 5, 6, 7, 8, 1};
+        int[] nums = new int[10];
+        Random r = new Random();
+        for (int i = 0; i < 10; i++) {
+            nums[i] = r.nextInt(100);
+        }
         System.out.println("source: " + Arrays.toString(nums));
         // bubbleSortOptimized(nums);
         //bubbleSortOptimizedWrong(nums);
         //cocktailSort(nums);
-        cocktailSortOptimized(nums);
+        //cocktailSortOptimized(nums);
+        //insertionSortOptimized(nums);
+        selectionSort(nums);
         System.out.println("result: " + Arrays.toString(nums));
 
     }
@@ -196,7 +201,7 @@ public class BubbleSort {
                 rightBorder = tmpRight;
             } else {
                 int tmpLeft = i / 2 + 1;
-                for (int j = rightBorder ; j > leftBorder; j--) {
+                for (int j = rightBorder; j > leftBorder; j--) {
                     if (nums[j - 1] > nums[j]) {
                         int tmp = nums[j];
                         nums[j] = nums[j - 1];
@@ -210,6 +215,52 @@ public class BubbleSort {
 
             System.out.println("circle " + i + ": " + Arrays.toString(nums)
                     + " nextLeft " + leftBorder + " nextRight " + rightBorder);
+        }
+    }
+
+    /*
+     * 插入排序
+     */
+    static void insertionSort(int[] nums) {
+        for (int i = 1; i < nums.length; i++) {
+            for (int j = i; j > 0 && (nums[j] < nums[j - 1]); j--) {
+                int tmp = nums[j];
+                nums[j] = nums[j - 1];
+                nums[j - 1] = tmp;
+            }
+        }
+    }
+
+    /*
+     * 插入排序优化
+     *
+     * 减少数组元素的交换次数
+     */
+    static void insertionSortOptimized(int[] nums) {
+        for (int i = 1, j; i < nums.length; i++) {
+            int current = nums[i];
+            for (j = i - 1; j >= 0 && (current < nums[j]); j--) {
+                nums[j + 1] = nums[j];
+            }
+            nums[j + 1] = current;
+        }
+    }
+
+    /*
+     * 选择排序
+     */
+    static void selectionSort(int[] nums) {
+        for (int i = 0; i < nums.length - 1; i++) {
+            int min = i;
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[j] < nums[min]) min = j;
+            }
+            if (min != i) {
+                int tmp = nums[i];
+                nums[i] = nums[min];
+                nums[min] = tmp;
+            }
+            System.out.println("circle " + i + ": " + Arrays.toString(nums));
         }
     }
 }
