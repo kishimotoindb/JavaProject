@@ -1,10 +1,11 @@
 package com.example.algorithm.sort;
 
+import java.util.Arrays;
 import java.util.Random;
 
 /**
  * Created by cuihaichen on 17-6-27.
- * 合并排序
+ * 归并排序
  */
 
 public class MergeSort {
@@ -41,16 +42,15 @@ public class MergeSort {
     }
 
     public static void main(String[] args) {
-        int[] result = MergeSortAlgorithm.sort(a, b);
-        for (int i : result) {
-            System.out.print(i + " ");
-        }
-
+        // 1.合并两个已经排好序的数组
+//        int[] result = sort(a, b);
+//        System.out.println(Arrays.toString(result));
     }
-}
 
-class MergeSortAlgorithm {
-    public static int[] sort(int[] a, int[] b) {
+    /*
+     * 合并两个已经排好序的数组（最简单的版本，空间复杂度最高）
+     */
+    static int[] sort(int[] a, int[] b) {
         int[] result = new int[a.length + b.length];
         int p1 = 0;
         int p2 = 0;
