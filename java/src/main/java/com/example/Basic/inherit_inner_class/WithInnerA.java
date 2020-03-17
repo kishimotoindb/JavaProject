@@ -10,7 +10,7 @@ public class WithInnerA {
         new InnerB().mF = 1;
     }
 
-    private class InnerA {
+    public class InnerA {
         /*
          * 内部类的访问限制符只对其他类起作用，对自己的外部类不起作用。即内部类的访问限制符是用来
          * 限制外人的，对自己的包裹类是透明的
