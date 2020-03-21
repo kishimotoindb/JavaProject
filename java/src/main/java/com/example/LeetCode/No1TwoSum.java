@@ -1,7 +1,7 @@
 package com.example.LeetCode;
 
+import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Random;
 
 /**
  * Created by BigFaceBear on 2020.03.16
@@ -9,9 +9,10 @@ import java.util.Random;
 public class No1TwoSum {
 
     public static void main(String[] args) {
-        int[] nums=new int[]{2,2,10,3};
-        int target = 4;
-        getTarget(nums, target);
+        int[] nums = new int[]{10, 20, 1, 3};
+        int target = 23;
+        getTwoSum1(nums, target);
+        getTwoSum2(nums, target);
     }
 
     /*
@@ -38,7 +39,7 @@ public class No1TwoSum {
      *   映射nums，更节省内存
      *
      */
-    static void getTarget(int[] nums, int target) {
+    static void getTwoSum1(int[] nums, int target) {
 
 //        用数组映射有个问题，原数组中有负数就没办法了
 //        int[] mapArr = new int[target + 1];
@@ -54,11 +55,43 @@ public class No1TwoSum {
         for (int i = 0; i < nums.length; i++) {
             int other = target - nums[i];
             if (map.containsKey(other)) {
-                result[0] = nums[i];
-                result[1] = other;
+                result[0] = i;
+                result[1] = map.get(other);
                 break;
             }
         }
-        System.out.println("target " + target + "=" + result[0] + "+" + result[1]);
+        System.out.println("nums " + Arrays.toString(nums) + "target "
+                + target + "=" + result[0] + "+" + result[1]);
     }
+
+    static void getTwoSum2(int[] nums, int target) {
+        int[] result = new int[2];
+        HashMap<Integer, Integer> hashmap = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            int other = target - nums[i];
+            if (hashmap.containsKey(other)) {
+                result[0] = i;
+                result[1] = hashmap.get(other);
+                break;
+            }
+            hashmap.put(nums[i], i);
+        }
+        System.out.println("nums " + Arrays.toString(nums) + "target "
+                + target + "=" + result[0] + "+" + result[1]);
+    }
+
+    /*
+     * Given an array of integers that is already sorted in ascending order, find
+     * two numbers such that they add up to a specific target number.
+     *
+     * The function twoSum should return indices of the two numbers such that they
+     * add up to the target, where index1 must be less than index2. Please note that
+     * your returned answers (both index1 and index2) are not zero-based.
+     *
+     * You may assume that each input would have exactly one solution.
+     * Input: numbers={2, 7, 11, 15}, target=9
+     *
+     * Output: index1=1, index2=2
+     */
+
 }
