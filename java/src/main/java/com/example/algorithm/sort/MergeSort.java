@@ -48,7 +48,10 @@ public class MergeSort {
 //        System.out.println(Arrays.toString(result));
 
         // 2.自底向上归并排序
-        mergeBU();
+        //mergeBU();
+
+        // 3.自顶向下归并排序
+        mergeRecursive();
     }
 
     /*
@@ -73,7 +76,39 @@ public class MergeSort {
         return result;
     }
 
+//    ----- merge recursive start-----
 
+    private static void mergeRecursive() {
+        int[] src = new int[r.nextInt(20)];
+        Arrays.setAll(src, new IntUnaryOperator() {
+            @Override
+            public int applyAsInt(int operand) {
+                return r.nextInt(100);
+            }
+        });
+        System.out.println("src: " + Arrays.toString(src));
+
+        mergeRecursiveImpl(src);
+    }
+
+    private static void mergeRecursiveImpl(int[] src) {
+        int[] aux = new int[src.length];
+        sort(src, aux, 0, src.length - 1);
+    }
+
+    private static void sort(int[] src, int[] aux, int lo, int high) {
+        if (lo >= high) {
+            return;
+        }
+
+        int mid = (lo + high) / 2;
+        sort(src, aux, lo, mid);
+        sort(src, aux, mid + 1, high);
+        merge2(src, aux, lo, mid, high);
+        System.out.println(Arrays.toString(src));
+    }
+
+// ------------------------------------mergeBU start------------------------------------
     /*
      * 自底向上的归并排序
      */
@@ -107,7 +142,7 @@ public class MergeSort {
                 if (j + childArrLen >= src.length) {
                     continue;
                 }
-                merge(src, aux, j, j + 2 * childArrLen);
+                merge1(src, aux, j, j + 2 * childArrLen);
             }
 
             System.out.println("seq " + i + ": " + Arrays.toString(src));
@@ -115,7 +150,7 @@ public class MergeSort {
         return src;
     }
 
-    static void merge(int[] src, int[] aux, int lo, int high) {
+    static void merge1(int[] src, int[] aux, int lo, int high) {
         // 确定第二个子数组的起始索引
         int p2Start = (int) ((lo + high) / 2 + 0.5f);
         high = Math.min(src.length, high);
@@ -168,9 +203,13 @@ public class MergeSort {
         }
     }
 
+// ------------------------------------mergeBU end------------------------------------
+
+
     private static boolean less(int l, int r) {
         return l < r;
     }
+
 }
 
 
