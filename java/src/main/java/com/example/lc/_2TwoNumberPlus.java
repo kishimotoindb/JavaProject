@@ -1,4 +1,4 @@
-package com.example.LeetCode;
+package com.example.lc;
 
 import java.util.Random;
 
@@ -11,7 +11,7 @@ import java.util.Random;
  * 输出：7 -> 0 -> 8
  * 原因：342 + 465 = 807
  */
-public class No2_twoNumberPlus {
+public class _2TwoNumberPlus {
 
     public static void main(String[] args) {
         Node[] pair = generateLinkList();

@@ -1,4 +1,4 @@
-package com.example.LeetCode;
+package com.example.lc;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -6,7 +6,7 @@ import java.util.HashMap;
 /**
  * Created by BigFaceBear on 2020.03.16
  */
-public class No1TwoSum {
+public class _1TwoSum {
 
     public static void main(String[] args) {
         int[] nums = new int[]{10, 20, 1, 3};

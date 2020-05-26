@@ -1,11 +1,11 @@
-package com.example.LeetCode;
+package com.example.lc;
 
 import java.util.Random;
 
 /*
  * 盛最多水的容器
  */
-public class No11_WaterContainer {
+public class _11WaterContainer {
     public static void main(String[] args) {
         Random random = new Random();
         int[] arr = new int[20];
