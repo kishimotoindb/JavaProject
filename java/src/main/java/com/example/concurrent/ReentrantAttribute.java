@@ -4,6 +4,8 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * Created by BigFaceBear on 2020.06.21
+ * 结论：
+ * 1. ReentrantLock和synchronized关键字，都具有可重入性。
  */
 public class ReentrantAttribute {
     final Object mSyncLock = new Object();
