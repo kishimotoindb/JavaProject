@@ -1,6 +1,4 @@
-package com.example.LeetCode;
-
-import com.example.e23.A;
+package com.example.lc;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,7 +8,7 @@ import java.util.List;
 /**
  * Created by BigFaceBear on 2020.05.18
  */
-public class No17_PhoneNumber {
+public class _17PhoneNumber {
 
     HashMap<Character, Character[]> map = new HashMap<>();
     int[][] pointerAndLimit;
@@ -33,7 +31,7 @@ public class No17_PhoneNumber {
 
     public static void main(String[] args) {
         String digits = "2321";
-        No17_PhoneNumber instance = new No17_PhoneNumber();
+        _17PhoneNumber instance = new _17PhoneNumber();
         instance.letterCombinations(digits);
     }
 
