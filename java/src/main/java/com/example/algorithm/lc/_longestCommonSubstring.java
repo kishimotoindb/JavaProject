@@ -15,13 +15,13 @@ public class _longestCommonSubstring {
         char[] source = (text1.length() < text2.length() ? text1 : text2).toCharArray();
         char[] target = (text1.length() < text2.length() ? text2 : text1).toCharArray();
         boolean[][] memo = new boolean[source.length][source.length];
-        int longest=0;
+        int longest = 0;
         for (int charCount = 1; charCount <= source.length; charCount++) {
             for (int startIndex = 0; startIndex < source.length; startIndex++) {
 
             }
         }
-
+        return 0;
 
     }
 }

@@ -1,4 +1,4 @@
-package com.example.Basic.classload;
+package com.example.Basic.classloader;
 
 public class Outer {
 
