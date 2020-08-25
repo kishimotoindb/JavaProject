@@ -1,4 +1,4 @@
-package com.example.lc;
+package com.example.algorithm.lc;
 
 import java.util.Arrays;
 import java.util.HashMap;
